@@ -10,10 +10,13 @@
     <li>
       <p>{{ entry.date_added|date:'M d, Y H:i' }}</p>
       <p>{{ entry.text|linebreaks }}</p>
+      <p><a href="{% url 'learning_logs:edit_entry' entry.id %}">Редактировать запись</a></p>
     </li>
   {% empty %}
     <li>Пока нет ни одной записи для данной темы.</li>
   {% endfor %}
   </ul>
+
+  <a href="{% url 'learning_logs:new_entry' topic.id %}">Добавить запись</a>
 
 {% endblock content %}
