@@ -1,5 +1,12 @@
 {% extends 'learning_logs/base.html' %}
 
-{% block content %}
-  <p>Лог Обучения помогает отслеживать прогресс изучения любых тем, изучаемых Вами.</p>
-{% endblock content %}
+{% block page_header %}
+  <div class="jumbotron">
+    <h1 class="display-3">Отслеживайте процесс изучения</h1>
+
+    <p class="lead"> Создайте собственний Дневник Изучения и храните список всех изучаемых Вами тем.
+      В любое время изучая что-то новое об интересующей Вас теме, создавайте запись резюмирующую Ваши новые знания.</p>
+
+    <a class="btn btn-lg btn-primary" href="{% url 'users:register' %}" role="button">Регистрация &raquo;</a>
+  </div>
+{% endblock page_header %}
