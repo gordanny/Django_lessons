@@ -2,7 +2,9 @@
 {% load bootstrap4 %}
 
 {% block page_header %}
+
   <h2>Войти в аккаунт.</h2>
+
 {% endblock page_header %}
 
 {% block content %}
@@ -13,8 +15,7 @@
     {% buttons %}
       <button name="submit" class="btn btn-primary">Войти</button>
     {% endbuttons %}
-
-    <input type="hidden" name="next" value="{% url 'learning_logs:index' %}" />
+    <input type="hidden" name="next" value="{% url 'learning_logs:topics' %}" />
   </form>
 
 {% endblock content %}

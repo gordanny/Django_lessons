@@ -16,7 +16,7 @@ def register(request):
             new_user = form.save()
             # Log in and redirect to home page.
             login(request, new_user)
-            return redirect('learning_logs:index')
+            return redirect('learning_logs:topics')
 
     # Render blank or incorrect form.
     context = {'form': form}
